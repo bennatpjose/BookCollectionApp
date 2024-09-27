@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"           
+             x:Class="BookCollectionApp.MainPage">
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            
+
+            <Entry 
+                x:Name="ISBNEntry"                              
+                Placeholder="Manually enter or press the Scan button to input the ISBN barcode"                
+                SemanticProperties.Hint="Manually enter or press the Scan button to input the ISBN barcode"/>
+            
+            <Button
+            x:Name="ScanBtn"
+            Text="Scan ISBN" 
+            SemanticProperties.Hint="Click the scan button to scan the ISBN barcode"
+            Clicked="ScanBtn_ClickedAsync"
+            HorizontalOptions="Fill" />
+            
+            <Label
+            Text="Once the ISBN is entered, press the Find Book button!"            
+            />
+            
+            <Button
+            x:Name="FindBookBtn"
+            Text="Find Book" 
+            SemanticProperties.Hint="Click the scan button to scan the ISBN barcode"
+            Clicked="ScanBtn_Clicked"
+            HorizontalOptions="Fill" />
+
+            <Label
+            Text="You can also check out the collections built by others!"            
+            />
+
+            <Button
+            x:Name="CollectionBtn"
+            Text="Browse Collections" 
+            SemanticProperties.Hint="Click the Collection button to view collections of books"
+            Clicked="CollectionBtn_Clicked"
+            HorizontalOptions="Fill" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
